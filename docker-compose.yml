@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker_files/web.dockerfile
+    volumes:
+      - .:/intento_api_proxy
+    env_file:
+      - envs/dev.env
+    command: gunicorn api_proxy.server.app:app --bind 0.0.0.0:8080 --worker-class aiohttp.GunicornWebWorker --reload --access-logfile -
+    ports:
+      - "8080:8080"
+
+

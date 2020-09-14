@@ -1,0 +1,5 @@
+aiohttp==3.6.2
+gunicorn
+pytest-aiohttp
+aiohttp-devtools
+ipdb
