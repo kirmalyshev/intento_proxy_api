@@ -19,3 +19,6 @@ async def get_config(argv=None) -> dict:
     if not all(data.values()):
         raise ValueError("not all of config variables are set")
     return data
+
+Async def my_func(slslsl=None) -> dict:
+    return None
